@@ -242,7 +242,7 @@ p {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     border: 2px solid #f96816;
-    transition: all 500ms ease-out 3s;
+    transition: opacity 500ms ease-out 3s, top 500ms ease-out 3s, box-shadow 300ms ease-out 0s, font-size 100ms ease-out 0s;
     position: relative;
     top: 2rem;
     opacity: 0;
@@ -253,6 +253,15 @@ p {
 @keyframes hue {
     0% {filter: hue-rotate(0deg);}
     100% {filter: hue-rotate(720deg);}
+}
+
+.startbtn:hover {
+    box-shadow: none;
+}
+
+.startbtn:active {
+    font-size: 1.75rem;
+    box-shadow: 0 0 5px #f96816;
 }
 
 .animateStartBtn {
