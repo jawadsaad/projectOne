@@ -14,9 +14,33 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v12/gk5FxslNkTTHtojXrkp-xBEur64QvLD-0IbiAdTUNXE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSansCondensed-Bold'), url(https://fonts.gstatic.com/s/opensanscondensed/v12/gk5FxslNkTTHtojXrkp-xIF8zhZCJ7x9Pr62cRgaVUA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
 body {
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +48,12 @@ body {
     width: 100%;
     background-color: #212121;
     color: red;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
 }
 
 p {
@@ -36,6 +66,12 @@ p {
     background-color: transparent;
     position: absolute;
     transform: scale(0);
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    color: #BABABA;
+
 }
 
 .temp {
@@ -47,25 +83,28 @@ p {
 }
 
 .welcomeC {
-    color: white;
+    color: #BABABA;
     border: none;
     position: relative;
     background-color: transparent;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
     transform: scale(1);
 }
 
 .welcomeheader {
+    color: #BABABA;
+    font-family: 'Lato', sans-serif;
     font-size: 4rem;
     font-weight: 700;
     position: relative;
     top: 35%;
     opacity: 0;
+/*
     transition: top 800ms ease-out 500ms,
+        opacity 500ms linear 300ms;
+*/
+    transition: top 550ms ease-out 1.3s,
         opacity 500ms linear 300ms;
 }
 
@@ -88,7 +127,8 @@ p {
 
 .briefing li {
     margin: 0.5rem 0;
-    font-size: 0.97rem;
+    font-size: 1.05rem;
+    line-height: 1.1;
 }
 
 .welcbox {
@@ -97,13 +137,13 @@ p {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .divider {
     width: 1%;
     height: 100%;
-    background-color: aliceblue;
+    background-color: #F77311;
     display: flex;
     align-items: flex-end;
 }
@@ -113,12 +153,19 @@ p {
     height: 0rem;
     width: 100%;
     background-color: #212121;
-    transition: all 2s ease-out 1.1s;
+    transition: all 2s ease-out 1.65s;
 }
 
 .welcomeToPosition {
     top: 0;
     opacity: 1;
+    animation: glow 1.4s;
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px;
+    }
 }
 
 .dividerAni {
@@ -132,10 +179,12 @@ p {
 
 #p2 {
     transition: all 800ms ease-out 1.7s;
+    font-weight: 700;
 }
 
 #p3 {
     transition: all 700ms ease-out 1.9s;
+    font-weight: 700;
 }
 
 .initialP {
@@ -183,6 +232,7 @@ p {
 }
 
 .startbtn {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8rem;
     margin: 1rem;
     padding: 0.5rem;
@@ -222,5 +272,77 @@ p {
 .bringInPreLvl1 {
     opacity: 1;
     transform: scale(1);
-    border: 1px solid white;
+/*    border: 1px solid white;*/
+}
+
+/***************************************/
+
+.levelheader {
+    text-align: right;
+}
+
+.lvl1d {
+    height: 85%;
+    min-width: 0.5%;
+    max-width: 0.51%;
+    margin: auto 0.5rem;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.lvlbox {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 1.3rem;
+}
+
+.rot13h3 {
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.rot13h2 {
+    font-family: 'Lato';
+    font-size: 2.14rem;
+}
+
+.abc {
+    letter-spacing: 1.076px;
+}
+
+.underline {
+    background-color: #F77311;
+    height: 6px;
+    width: 0;
+/*    padding-right: 24.9rem;*/
+    padding-right: 103%;
+}
+
+.usertext {
+    font-size: 1rem;
+    background-color: #BABABA;
+    box-shadow: 0 0 5px #BABABA;
+    width: 98%;
+}
+
+.submitbtn {
+    margin: 1rem 0;
+}
+
+.stuck {
+    margin-bottom: 1rem;
+}
+
+.pos {
+    height: 85%;
+    justify-content: flex-end;
+}
+
+.u2 {
+    margin-bottom: 1rem;
+    position: relative;
+    right: 3%;
 }
