@@ -43,7 +43,7 @@ window.onload = function() {
     
     var level3 = document.getElementById('level3');
     
-    var exitPage = document.getElementById('endofgame');
+    var exitPage = document.getElementById('exitpage');
     
    function startClicked() {
        var welcomeContainer = document.getElementById('welcome');
@@ -158,10 +158,10 @@ window.onload = function() {
         function takeToExitPage() {
             popUpWindow.classList.remove('display');
             level3.classList.add('nodisplay');
-            exitPage.classList.remove('nodisplay');
+            exitPage.classList.remove('temp');
         }
         
-//        exitRestartBtn.addEventListener("click", refreshPage, false);
+        exitRestartBtn.addEventListener("click", refreshPage, false);
         
         // POP-UP WINDOW
         var popUpWindow = document.getElementById('blackout');
