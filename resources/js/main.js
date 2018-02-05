@@ -116,7 +116,7 @@ window.onload = function() {
         
         function closePopUp() {
             popUpWindow.classList.remove('display');
-            
+            popUpText.innerHTML = "";
             returnToGame.classList.remove('display');
         }
         
@@ -189,6 +189,7 @@ window.onload = function() {
             } else if (userAttempt.toLowerCase() != message.toLowerCase()) {
                 popUpWindow.classList.add('display');
                 popUpHeader.innerHTML = "Incorrect! Please try again!"
+                popUpText.innerHTML = "";
                 returnToGame.classList.add('display');
             }
         }
@@ -232,6 +233,7 @@ window.onload = function() {
             } else if (formatDuration(userEnteredTimeInSeconds) != formatDuration(numberOfSeconds)) {
                 popUpWindow.classList.add('display');
                 popUpHeader.innerHTML = "Incorrect! Please try again!"
+                popUpText.innerHTML = "";
                 returnToGame.classList.add('display');
             }
         }
