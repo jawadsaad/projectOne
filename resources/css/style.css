@@ -48,6 +48,7 @@ body {
     width: 100vw; /*test*/
     background-color: #212121;
     color: #BABABA;
+    overflow-x: hidden;
 }
 
 h1 {
