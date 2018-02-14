@@ -11,52 +11,68 @@
     <body>
         <div id="exitpage" class="endofgame temp">
             <h1>THANK YOU FOR PLAYING THIS SHORT GAME</h1>
-            <button id="exit-page-restartbtn">Play Again</button>
+            <button id="exit-page-restartbtn" class="submitbtn">Play Again</button>
         </div>
               
         <div id="level3" class="container nodisplay">
-            <article id="lvl3game" class="lvlbox">
-                <p class="lvl3firstpara">...Down to the last hour now. It'll be a miracle if we can terminate that worm. The message said something about a password key...we tried it and it didn't work. We're guessing it's a key to unlock the password. Can you crack the key and figure out what the password is?</p>
+            <article id="lvl3game" class="lvl2box">
+                <div class="lvl2headcontainer">
+                    <h1 id="lvl2header" class="levelheader">LEVEL Three</h1>
+                    <div class="underline lvl3underline" id="lvl3underline"></div>
+                </div>
+                <p class="lvl3firstpara"><br/>The password key unlocks the password. The key is the product of 2 consecutive Fibonacci sequence numbers.<br/>To get the password, figure out the 2 numbers, where they fall in the sequnce and join the results together.</p>
                 
-                <p>[Hint: the key is the product of 2 consecutive Fibonacci sequence numbers. You'll have to figure out which 2 numbers those are. You'll also have to figure out where they fall in the Fibonacci sequnce and join the results together.]</p>
+<!--                <p>[Hint: the key is the product of 2 consecutive Fibonacci sequence numbers. You'll have to figure out which 2 numbers those are. You'll also have to figure out where they fall in the Fibonacci sequnce and join the results together.]</p>-->
                 
-                <p>[EXAMPLE: F(5) = 5; F(6) = 8. The numbers 5 and 8 are consecutive Fibonacci sequence numbers that fall at positions 5 and 6 in the sequence. So, if the password key was 5 x 8 = 40, the password itself would be 56, which is the result of joining 5 and 6 together.]</p>
+                <p>[EXAMPLE: F(5) = 5; F(6) = 8. If the key is 5 x 8 = 40, the password would be 56, which is the result of joining 5 and 6 together.]</p>
+                
+<!--                <br/>-->
                 
                 <p id="keydisplay" class="numberdisplay"></p>
                 
-                <br/>
+<!--                <br/>-->
                 
                 <div class="pwdiv">
-                    <span>Enter password:</span>
-                    <form id="lvl3password">
+<!--                    <span>Enter password:</span>-->
+<!--                    <br/>-->
+                    <form id="lvl3password" class="lvl3forms">
+                        <span>Enter password:</span>
+                        <br/>
                         <input id="lvl3pw" type="number" class="pwbox">
-                        <input type="button" id="passwordbtn" value="Submit">
+                        <input type="button" id="passwordbtn" value="Submit" class="submitbtn lvl3btn">
                     </form>
                 </div>
                 <br/>
+<!--                <br/>-->
+<!--                <br/>-->
                 
-                <h3 class="stuck">Stuck? Use the tools below:</h3>
+                <h3 class="stuck">Stuck? Enter any number here to check if it is the product of 2 consecutive Fibonacci sequence numbers:</h3>
             
             <form id="fibonaccitools" class="lvl3forms">
+<!--
                 <span class="F">F</span>
                 <input type="number" class="timebox fib">
                 <input type="button" value="x">
                 <span class="F">F</span>
                 <input type="number" class="timebox fib">
                 <input type="submit">
-                <br/><br/>
-                <p>Enter any number here to check if it is the product of 2 consecutive Fibonacci sequence numbers. It will also reveal the numbers in question:</p>
+-->
+<!--                <br/><br/>-->
+<!--                <p>Enter any number here to check if it is the product of 2 consecutive Fibonacci sequence numbers:</p>-->
                 <input type="number" id="fibchecker" class="fibbox">
-                <input type="button" value="Check" id="fibcheckbtn">
+                <input type="button" value="Check" id="fibcheckbtn" class="submitbtn lvl3btn">
             </form>
+<!--                <br/>-->
                 <p id="fibcheckresult"></p>
             </article>
             
-            <div class="divider lvl1d"></div>
+<!--            <div class="divider lvl1d"></div>-->
             
+<!--
             <div class="lvl3title">
-            <h1 id="lvl3header" class="lvl3header">LEVEL Three</h1>
-                </div>
+                <h1 id="lvl3header" class="lvl3header">LEVEL Three</h1>
+            </div>
+-->
             
         </div>
         
@@ -67,7 +83,7 @@
                 <h1 id="lvl2header" class="levelheader">LEVEL Two</h1>
                 <div class="lvl2undercon">
                     <div class="lvl2underleft lvl2underline"></div>
-                    <div class="lvl2underright lvl2underline"></div>
+<!--                    <div class="lvl2underright lvl2underline"></div>-->
                 </div>
             </div>
             
@@ -75,7 +91,7 @@
             <p><br/><br/>We need to make sense of that. Work out how much time that is in a format that we can all understand.</p>
             <p>Convert the time from seconds into Days, Hours, Minutes and Seconds.</p>
             
-            <p id="timedisplay" class="numberdisplay">DISPLAY TIME HERE</p>
+            <p id="timedisplay" class="numberdisplay"></p>
             <br/>
             
             <form id="lvl2form" class="lvl2forms">
@@ -85,17 +101,17 @@
                     <input id="minutes" class="timebox" type="number" min="0" max="5"/><span class="timeunit">minutes,</span>
                     <input id="seconds" class="timebox" type="number" min="0" max="5"/><span class="timeunit">seconds</span>
                 </div>
-                <br/>
-                <input type="button" id="lvl2userattempt" class="submitlvl2" value="Check">
-                <br/>
+<!--                <br/>-->
+                <input type="button" id="lvl2userattempt" class="submitlvl2 submitbtn" value="Check">
+<!--                <br/>-->
             </form>
             
             <h3 class="stuck">Stuck? Use the time converter below:</h3>
             
             <form id="timeconverter" class="lvl2forms">
                 <input type="number" class="timeboxlarge" id="timetoconvert">
-                <br/>
-                <input type="button" value="Convert Time" id="checktime">
+<!--                <br/>-->
+                <input type="button" value="Convert Time" id="checktime" class="submitbtn">
             </form>
             
             <p id="convertedtime"></p>
@@ -105,42 +121,32 @@
         <!--------------------------------LEVEL 1---------------------------------------->
         
         <div id="pre-level1" class="container nodisplay">
-            <article id="lvl1info" class="lvlbox">
-                <h1 class="levelheader" id="lvl1header">LEVEL One</h1>
-                <div class="underline" id="lvl1underline"></div>
+            <article id="lvl1info" class="lvl2box">
+                <div class=lvl2headcontainer>
+                    <h1 class="levelheader lvl1header" id="lvl1header">LEVEL One</h1>
+                    <div class="underline" id="lvl1underline"></div>
+                </div>
                 
-                <p>We have intercepted an encrypted message from the hackers. We believe they have used the ROT13 substitution cipher to encrypt it.</p>
+                <p>Decrypt the message below. It has been encrypted with the ROT13 substitution cipher.<br/><br/>ROT13 encryption simply replaces a letter with the 13th letter after it. Numbers and characters remain unchanged.</p>
                 
-                <p>Decrypt the message and help us figure out exactly what we're up against.</p>
-                
-                <h3 class="rot13h3">About ROT13:</h3>
-                
-                <p>ROT13 encryption simply replaces a letter with the 13th letter after it. Numbers and characters remain unchanged.</p>
-                
+<!--
                 <h2 class="rot13h2 abc">A B C D E F G H I J K L M</h2>
                 
-                <p></p>
-                
                 <h2 class="rot13h2 nop">N O P Q R S T U V W X Y Z</h2>
-            </article>
-            
-            <div class="divider lvl1d"></div>
-            
-            <article id="lvl1game" class="lvlbox pos">
-                <h3>Message:</h3>
+-->
                 
-                <p id="msg"></p>
+                <h3 class="numberdisplay">Message:</h3>
                 
-                <form id="rot13form">
+                <p id="msg" class="msg"></p>
+                
+                <form id="rot13form" class="rot13forms">
                     <textarea id="rot13input" class="usertext" rows="3" cols=""></textarea>
                     <input type="button" id="rot13submit" class="submitbtn" value="Decrypt">
                 </form>
                 
-                <div class="underline u2" id="lvl1underline2"></div>
-                
                 <h3 class="stuck">Stuck? Use the ROT13 encryptor/decryptor:</h3>
                 
-                <form id="rot13device">
+                <form id="rot13device" class="rot13forms">
                     <textarea id="rot13input2" class="usertext" rows="3" cols=""></textarea>
                     <input type="button" id="rot13submit2" class="submitbtn" value="Encrypt/Decrypt">
                 </form>
