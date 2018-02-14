@@ -71,6 +71,7 @@ p {
     justify-content: center;
     align-items: center;
     color: #BABABA;
+    overflow-x: hidden;
 }
 
 .blackout {
