@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #212121;
     color: #BABABA;
@@ -61,7 +61,7 @@ p {
 }
 
 .container {
-    height: 90vh;
+    min-height: 90vh;
     width: 95%;
     background-color: #212121;
     position: absolute;
@@ -70,7 +70,6 @@ p {
     justify-content: center;
     align-items: center;
     color: #BABABA;
-
 }
 
 .blackout {
@@ -103,11 +102,20 @@ p {
     font-size: 1.1rem;
     color: #BABABA;
     text-align: center;
+    margin: 1rem;
 }
 
 .popbutton {
     display: none;
     margin: 1rem;
+    width: 8rem;
+    height: 3rem;
+    color: #F77311;
+    border: 2px solid #F77311;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
 }
 
 .finalpopbuttons {
@@ -355,7 +363,12 @@ p {
 /***************************************/
 
 .levelheader {
-    text-align: right;
+    text-align: center;
+}
+
+.lvl1header {
+    margin-top: 3rem;
+    width: auto;
 }
 
 .lvl1d {
@@ -371,12 +384,13 @@ p {
     display: flex;
     flex-direction: column;
     width: 30%;
+    width: 90%;
     font-size: 1.3rem;
-    height: 85%
+    height: 100%;
 }
 
 .rot13h3 {
-    text-align: right;
+    text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
@@ -394,21 +408,29 @@ p {
 .underline {
     background-color: #F77311;
     height: 6px;
-    width: 0;
+    width: 20rem;
 /*    padding-right: 24.9rem;*/
-    padding-right: 103%;
+/*    padding-right: 103%;*/
 }
 
 .usertext {
     font-size: 1rem;
     background-color: #BABABA;
     box-shadow: 0 0 5px #BABABA;
-    width: 98%;
+    width: 50%;
     resize: none;
 }
 
 .submitbtn {
     margin: 1rem 0;
+    display: block;
+    width: 8rem;
+    height: 2rem;
+    color: #F77311;
+    border: 2px solid #F77311;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .stuck {
@@ -426,6 +448,17 @@ p {
     right: 3%;
 }
 
+.rot13forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msg {
+    color: #F77311;
+    font-weight: bold;
+}
+
 /**********************************/
 
 /*
@@ -436,6 +469,7 @@ p {
 .lvl2box {
     flex-direction: column;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .timebox {
@@ -488,7 +522,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .lvl2underleft {
-    padding-right: 50%;
+/*    padding-right: 50%;*/
+    width: 100%;
 }
 
 .lvl2underright {
@@ -519,7 +554,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 #lvl3game {
-    width: 49%;
+/*    width: 49%;*/
 }
 
 #lvl3game p {
@@ -532,11 +567,20 @@ input[type=number]::-webkit-inner-spin-button {
 
 .pwdiv {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 #lvl3password {
     margin-left: 1rem;
+}
+
+.lvl3forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .pwbox {
@@ -549,4 +593,19 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 1.3rem;
     background-color: #BABABA;
     box-shadow: 0 0 5px #BABABA;
+}
+
+.lvl3underline {
+    width: 23rem;
+}
+
+.lvl3btn {
+/*    display: inline;*/
+}
+
+
+@media screen and (max-width: 770px) {
+    .pop-up {
+        width: 90%;
+    }
 }
