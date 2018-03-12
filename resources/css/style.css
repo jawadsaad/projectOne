@@ -63,10 +63,10 @@ p {
 
 .container {
     min-height: 90vh;
-    width: 95%;
+    width: 95vw;
     background-color: #212121;
     position: absolute;
-    transform: scale(1);
+/*     transform: scale(1); */
     display: flex;
     justify-content: center;
     align-items: center;
