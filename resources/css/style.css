@@ -68,7 +68,7 @@ p {
     width: 95vw;
     background-color: #212121;
     position: absolute;
-    left: 0;
+    left: 50%;
 /*     transform: scale(1); */
     display: flex;
     justify-content: center;
