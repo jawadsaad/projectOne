@@ -83,7 +83,7 @@ p {
 .blackout {
     display: none;
     background-color: rgba(0,0,0,0.9);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 1;
