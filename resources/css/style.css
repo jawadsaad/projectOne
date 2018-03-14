@@ -86,13 +86,14 @@ p {
     height: 100vh;
     width: 100%;
     position: absolute;
+    z-index: 1;
 }
 
 .pop-up {
     min-height: 30vh;
     width: 40%;
     background-color: #212121;
-    z-index: 1;
+    z-index: 2;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
