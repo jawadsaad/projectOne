@@ -201,8 +201,8 @@ window.onload = function() {
             alert("Message has been copied to clipboard");
         }
         
-        var copyMsg = document.getElementById('copyMsg');
-        copyMsg.addEventListener('click', copyMsg, false);
+        var copyMsgBtn = document.getElementById('copyMsg');
+        copyMsgBtn.addEventListener("click", copyMsg, false);
         
         // LEVEL 2 HUMAN READABLE TIME GAMEPLAY
         
