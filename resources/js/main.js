@@ -194,16 +194,6 @@ window.onload = function() {
             }
         }
         
-        function copyMsg() {
-            var msg = document.getElementById('msg').innerText;
-            msg.select();
-            document.execCommand('Copy');
-            alert("Message has been copied to clipboard");
-        }
-        
-        var copyMsgBtn = document.getElementById('copyMsg');
-        copyMsgBtn.addEventListener("click", copyMsg, false);
-        
         // LEVEL 2 HUMAN READABLE TIME GAMEPLAY
         
         var userCheckTimeBtn = document.getElementById('lvl2userattempt');
