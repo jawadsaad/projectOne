@@ -87,6 +87,7 @@ p {
     width: 100%;
     position: absolute;
     z-index: 1;
+    left: 0;
 }
 
 .pop-up {
