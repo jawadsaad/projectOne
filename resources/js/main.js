@@ -195,7 +195,7 @@ window.onload = function() {
         }
         
         function copyMsg() {
-            var msg = document.getElementById('msg');
+            var msg = document.getElementById('msg').innerText;
             msg.select();
             document.execCommand('Copy');
             alert("Message has been copied to clipboard");
